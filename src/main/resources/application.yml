@@ -1,0 +1,17 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "metrics,health,prometheus"
+      base-path: "/actuator"
+  server:
+    port: 8086
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
