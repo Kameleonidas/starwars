@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PageDto<T> {
 
-    public Integer count;
-    public String next;
-    public String previous;
+    private Integer count;
+    private String next;
+    private String previous;
     @Builder.Default
-    public List<T> results = new LinkedList<>();
+    private List<T> results = new LinkedList<>();
 
 }

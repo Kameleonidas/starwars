@@ -24,13 +24,13 @@ public class StarWarsService {
         List<Object> characterList = new ArrayList<>();
         PageDto<CharacterDto> characterPage = getPageCharacters(page);
 
-        for (CharacterDto characterDto : characterPage.results) {
+        for (CharacterDto characterDto : characterPage.getResults()) {
             characterList.add(buildCharacter(characterDto));
         }
 
         return Page.builder()
-            .count(characterPage.count)
-            .pages(getPages(characterPage.count))
+            .count(characterPage.getCount())
+            .pages(getPages(characterPage.getCount()))
             .results(characterList)
             .build();
     }
@@ -53,14 +53,14 @@ public class StarWarsService {
     private Character buildCharacter(CharacterDto characterDto) {
 
         return Character.builder()
-            .name(characterDto.name)
-            .height(characterDto.height)
-            .mass(characterDto.mass)
-            .hairColor(characterDto.hairColor)
-            .skinColor(characterDto.skinColor)
-            .eyeColor(characterDto.eyeColor)
-            .birthYear(characterDto.birthYear)
-            .gender(characterDto.gender)
+            .name(characterDto.getName())
+            .height(characterDto.getHeight())
+            .mass(characterDto.getMass())
+            .hairColor(characterDto.getHairColor())
+            .skinColor(characterDto.getSkinColor())
+            .eyeColor(characterDto.getEyeColor())
+            .birthYear(characterDto.getBirthYear())
+            .gender(characterDto.getGender())
             .homeworld(getHomeworld(characterDto.getHomeworld()))
             .starships(getListStarship(characterDto.getStarships()))
             .build();
@@ -114,8 +114,8 @@ public class StarWarsService {
         return Long.parseLong(numberOnly);
     }
 
-    private Integer getPages(Integer countCharacter){
-        return (int) Math.ceil((double)countCharacter / 10);
+    private Integer getPages(Integer countCharacter) {
+        return (int) Math.ceil((double) countCharacter / 10);
     }
 
 }

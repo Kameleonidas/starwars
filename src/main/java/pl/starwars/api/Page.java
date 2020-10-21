@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Page<T> {
+class Page<T> {
 
-    public Integer count;
-    public Integer pages;
+    private Integer count;
+    private Integer pages;
     @Builder.Default
-    public List<T> results = new LinkedList<>();
+    private List<T> results = new LinkedList<>();
 
 }

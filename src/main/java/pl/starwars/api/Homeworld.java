@@ -12,16 +12,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Homeworld {
 
-    public String name;
+    private String name;
     @SerializedName("rotation_period")
-    public String rotationPeriod;
+    private String rotationPeriod;
     @SerializedName("orbital_period")
-    public String orbitalPeriod;
-    public String diameter;
-    public String climate;
-    public String gravity;
-    public String terrain;
+    private String orbitalPeriod;
+    private String diameter;
+    private String climate;
+    private String gravity;
+    private String terrain;
     @SerializedName("surface_water")
-    public String surfaceWater;
-    public String population;
+    private String surfaceWater;
+    private String population;
 }

@@ -10,17 +10,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Character {
+class Character {
 
-    public String name;
-    public String height;
-    public String mass;
-    public String hairColor;
-    public String skinColor;
-    public String eyeColor;
-    public String birthYear;
-    public String gender;
-    public Homeworld homeworld;
-    public List<Starship> starships;
+    private String name;
+    private String height;
+    private String mass;
+    private String hairColor;
+    private String skinColor;
+    private String eyeColor;
+    private String birthYear;
+    private String gender;
+    private Homeworld homeworld;
+    private List<Starship> starships;
 
 }

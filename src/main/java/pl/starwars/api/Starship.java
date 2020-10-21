@@ -12,23 +12,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Starship {
 
-    public String name;
-    public String model;
-    public String manufacturer;
+    private String name;
+    private String model;
+    private String manufacturer;
     @SerializedName("cost_in_credits")
-    public String costInCredits;
-    public String length;
+    private String costInCredits;
+    private String length;
     @SerializedName("max_atmosphering_speed")
-    public String maxAtmospheringSpeed;
-    public String crew;
-    public String passengers;
+    private String maxAtmospheringSpeed;
+    private String crew;
+    private String passengers;
     @SerializedName("cargo_capacity")
-    public String cargoCapacity;
-    public String consumables;
+    private String cargoCapacity;
+    private String consumables;
     @SerializedName("hyperdrive_rating")
-    public String hyperdriveRating;
+    private String hyperdriveRating;
     @SerializedName("MGLT")
-    public String mglt;
+    private String mglt;
     @SerializedName("starship_class")
-    public String starshipClass;
+    private String starshipClass;
 }

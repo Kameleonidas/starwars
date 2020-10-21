@@ -14,18 +14,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CharacterDto {
 
-    public String name;
-    public String height;
-    public String mass;
+    private String name;
+    private String height;
+    private String mass;
     @SerializedName("hair_color")
-    public String hairColor;
+    private String hairColor;
     @SerializedName("skin_color")
-    public String skinColor;
+    private String skinColor;
     @SerializedName("eye_color")
-    public String eyeColor;
+    private String eyeColor;
     @SerializedName("birth_year")
-    public String birthYear;
-    public String gender;
-    public String homeworld;
-    public List<String> starships;
+    private String birthYear;
+    private String gender;
+    private String homeworld;
+    private List<String> starships;
 }
